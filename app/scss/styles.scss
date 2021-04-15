@@ -1,0 +1,100 @@
+@import 'variables';
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+// 1. Sass/SCSS Variables --------------------
+$buttons: #b231fb; // Example #1
+$emphasis: #f1ddfc; // Example #2
+$text: purple; // Example #3
+// End Variables ------------------------------
+
+// Mixin Examples -----------------------------
+// Example #1
+@mixin heading($color) {
+  text-align: left;
+  font-size: 1.5em;
+  color: $color;
+}
+
+form p {
+  @include heading($buttons); // Variable
+}
+
+// Example #2
+@mixin paragraph($color) {
+  text-align: left;
+  font-size: 1.1em;
+  color: $color;
+}
+
+.jumbotron p {
+  @include paragraph($text); // Variable
+}
+// End mixins -----------------------------------
+
+// Sass/SCSS Nesting Examples -------------------
+// Example #1
+.nav {
+  font-size: 1.8em;
+
+  a {
+    color: #b231fb;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+// Example #2
+.jumbotron {
+  background-color: $emphasis; // Variable
+
+  h1 {
+    color: purple;
+  }
+}
+
+// Example #3
+.greeting {
+  padding-top: 2em;
+  padding-bottom: 3em;
+
+  .card {
+    margin-top: 2em;
+    background-color: white;
+    border: dashed 1px $buttons; // Variable
+    
+    .card-header {
+      h5 {
+        a {
+          color: $buttons; // Variable
+        }
+      }
+    }
+  }
+}
+// End nesting ----------------------------------
+
+body {
+  background-color: white;
+}
+
+.jumbotron {
+  background-color: $emphasis; // Variable
+}
+
+.btn {
+  background-color: $buttons; // Variable
+  border: white;
+  color: white;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+  border: black;
+}
+
+.row {
+  padding-bottom: 2em;
+}
