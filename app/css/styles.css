@@ -7236,3 +7236,9 @@ body {
 
 .row {
   padding-bottom: 2em; }
+
+.images {
+  padding-bottom: 2em; }
+  .images h2 {
+    text-align: center;
+    color: #b231fb; }
