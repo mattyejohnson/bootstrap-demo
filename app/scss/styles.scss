@@ -63,7 +63,7 @@ form p {
     margin-top: 2em;
     background-color: white;
     border: dashed 1px $buttons; // Variable
-    
+
     .card-header {
       h5 {
         a {
@@ -97,4 +97,13 @@ body {
 
 .row {
   padding-bottom: 2em;
+}
+
+.images {
+  padding-bottom: 2em;
+
+  h2 {
+    text-align: center;
+    color: #b231fb;
+  }
 }
