@@ -91,14 +91,14 @@ blockquote {
     }
   }
 };
-// End Extends/Inheritance Example -------------
+// End Extends/Inheritance Example -------------------
 
-// Operator and Interpolation Example ----------------------------
+// Operator and Interpolation Example ----------------
 .mb-0 {
   font-size: .7em * 2; // Operator Example
   color: #{$quote}; // Interpolation Example
 }
-// End Operator and Interpolation Example
+// End Operator and Interpolation Example -------------
 
 body {
   background-color: black;
