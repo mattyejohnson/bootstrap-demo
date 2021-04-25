@@ -377,11 +377,11 @@ mark,
   margin-bottom: 1rem;
   font-size: 1.25rem; }
 
-.blockquote-footer {
+.blockquote-footer, blockquote .blockquote-footer .cite {
   display: block;
   font-size: 80%;
   color: #6c757d; }
-  .blockquote-footer::before {
+  .blockquote-footer::before, blockquote .blockquote-footer .cite::before {
     content: "\2014\00A0"; }
 
 .img-fluid {
@@ -7199,9 +7199,10 @@ form p {
 .nav {
   font-size: 1.8em; }
   .nav a {
-    color: #b231fb; }
+    color: #b231fb;
+    font-family: monospace; }
     .nav a:hover {
-      color: black; }
+      color: white; }
 
 .jumbotron {
   background-color: #f1ddfc; }
@@ -7218,11 +7219,18 @@ form p {
     .greeting .card .card-header h5 a {
       color: #b231fb; }
 
-body {
-  background-color: white; }
+blockquote {
+  padding-bottom: 1.2em; }
+  blockquote .blockquote-footer, blockquote .blockquote-footer .cite {
+    color: purple;
+    font-size: 1em; }
 
-.jumbotron {
-  background-color: #f1ddfc; }
+.mb-0 {
+  font-size: 1.4em;
+  color: white; }
+
+body {
+  background-color: black; }
 
 .btn {
   background-color: #b231fb;
@@ -7230,9 +7238,7 @@ body {
   color: white; }
 
 .btn:hover {
-  background-color: white;
-  color: black;
-  border: black; }
+  background-color: #3d025e; }
 
 .row {
   padding-bottom: 2em; }
@@ -7241,4 +7247,4 @@ body {
   padding-bottom: 2em; }
   .images h2 {
     text-align: center;
-    color: #b231fb; }
+    color: #d795fd; }
