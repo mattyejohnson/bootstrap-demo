@@ -5,6 +5,7 @@
 $buttons: #b231fb; // Example #1
 $emphasis: #f1ddfc; // Example #2
 $text: purple; // Example #3
+$quote: white;
 // End Variables ------------------------------
 
 // Mixin Examples -----------------------------
@@ -38,9 +39,10 @@ form p {
 
   a {
     color: #b231fb;
+    font-family: monospace;
 
     &:hover {
-      color: black;
+      color: white;
     }
   }
 }
@@ -51,6 +53,7 @@ form p {
 
   h1 {
     color: purple;
+
   }
 }
 
@@ -75,12 +78,30 @@ form p {
 }
 // End nesting ----------------------------------
 
-body {
-  background-color: white;
-}
+// Extends/Inheritance Example ------------------
+blockquote {
+  padding-bottom: 1.2em;
 
-.jumbotron {
-  background-color: $emphasis; // Variable
+  .blockquote-footer {
+    color: purple;
+    font-size: 1em;
+
+    .cite {
+      @extend .blockquote-footer
+    }
+  }
+};
+// End Extends/Inheritance Example -------------
+
+// Operator and Interpolation Example ----------------------------
+.mb-0 {
+  font-size: .7em * 2; // Operator Example
+  color: #{$quote}; // Interpolation Example
+}
+// End Operator and Interpolation Example
+
+body {
+  background-color: black;
 }
 
 .btn {
@@ -89,10 +110,9 @@ body {
   color: white;
 }
 
+// Other example ---------------------------
 .btn:hover {
-  background-color: white;
-  color: black;
-  border: black;
+  background-color: darken($buttons, 40%); // Darken function
 }
 
 .row {
@@ -104,6 +124,7 @@ body {
 
   h2 {
     text-align: center;
-    color: #b231fb;
+    color: lighten(#b231fb, 20%); // Lighten function
   }
 }
+// End Other example ---------------------------
